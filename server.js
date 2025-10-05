@@ -3,15 +3,32 @@ import http from "http";
 import { Server } from "socket.io";
 import dotenv from "dotenv"; 
 import ACTIONS from "./src/actions.js";
+import path from "path";
+import { fileURLToPath } from "url";
 
-dotenv.config(); // Load environment variables
+dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server);
+const io = new Server(server, {
+    cors: {
+        origin: process.env.CLIENT_URL || "*",
+        methods: ["GET", "POST"]
+    }
+});
 
 const PORT = process.env.PORT || 3000;
 
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'dist')));
+
+// Handle React routing, return all requests to React app
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
 
 const userSocketMap = {};
 
