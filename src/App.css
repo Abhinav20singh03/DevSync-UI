@@ -1,0 +1,18 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Removes main page scrollbar */
+}
+
+.CodeMirror {
+  height: 100vh;
+  min-height: calc(60vh);
+  font-size: 14px;
+  border-radius: 10px;
+  outline: none;
+  background-color: #2e2e2e;/* Grey background */
+  color: #e0e0e0; /* Light grey text */
+  border: 1px solid #3a3a3a; /* Soft border */
+  overflow: auto;
+}
+

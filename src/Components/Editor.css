@@ -1,0 +1,94 @@
+#realTimeCodeEditor {
+    width: 100%;
+    font-size: 1rem;
+    height: 60vh;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #212121; /* Dracula background */
+    color: #f8f8f2; /* Text color */
+  }
+  
+  .component-container{
+    width: 100%;
+  }
+  .navbar{
+    font-size: 15px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    background-color: #212121;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  select {
+    font-family: Poppins;
+    
+  padding-right: 1.5rem; /* give space for arrow */
+  appearance: none; /* hides default arrow in some browsers */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg fill="gray" height="10" viewBox="0 0 20 20" width="10" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 0.5rem center;
+  background-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  width: 150px;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  background-color: #313235;
+  color: #ffffff;
+  transition: 0.2s;
+}
+
+select:hover {
+  border-color: #242828;
+}
+.settings{
+  display: flex;
+  gap: 10px;
+
+}
+
+.navbutton{
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  padding: 5px ;
+  background-color: #212121;
+  color: #ffffff;
+  border-radius: 10px;
+  border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Scrollbar styling for dropdowns */
+select::-webkit-scrollbar {
+    width: 8px;
+}
+
+select::-webkit-scrollbar-track {
+    background: #1b1b1b; /* match your theme background */
+    border-radius: 5px;
+}
+
+select::-webkit-scrollbar-thumb {
+    background: #555; /* medium gray for contrast */
+    border-radius: 5px;
+}
+
+select::-webkit-scrollbar-thumb:hover {
+    background: #888; /* lighter gray on hover */
+}
+
+/* Firefox scrollbar styling for dropdowns */
+select {
+    scrollbar-width: thin;
+    scrollbar-color: #555 #1b1b1b;
+}

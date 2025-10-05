@@ -1,0 +1,57 @@
+.output-box {
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  height: 25vh;
+  font-size: medium;
+  background-color: #212121;
+  overflow-y: auto; /* keep scrolling */
+  color: #f1f1f1;
+  font-family: 'Consolas', monospace;
+}
+
+/* Custom minimal dark scrollbar */
+.output-box::-webkit-scrollbar {
+  width: 6px; /* thin scrollbar */
+}
+
+.output-box::-webkit-scrollbar-track {
+  background: #1a1a1a; /* dark background */
+  border-radius: 10px;
+}
+
+.output-box::-webkit-scrollbar-thumb {
+  background-color: #333; /* subtle thumb color */
+  border-radius: 10px;
+}
+
+.output-box::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* slightly lighter on hover */
+}
+
+/* For Firefox */
+.output-box {
+  scrollbar-width: thin;
+  scrollbar-color: #333 #1a1a1a;
+}
+.run{
+    background-color: rgb(0, 124, 176);
+    font-family: Poppins;
+    color: white;
+    padding: 7px 15px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    
+}
+.output-feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
