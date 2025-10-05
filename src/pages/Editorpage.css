@@ -2,43 +2,62 @@
   width: 100%;
   display: flex;
   height: 100vh;
-  background-color: #191717;
-  color: white;
+  background-color: #0a0a0a;
+  color: #e4e4e7;
 }
 
 /* Sidebar */
 .profile-side {
-  width: 225px;
-  border-radius: 10px;
-  background-color: #212121;
-  padding: 10px;
-  margin-top:10px;
-  margin-bottom:10px;
-  margin-left: 10px;
+  width: 240px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0f0f0f 0%, #18181b 100%);
+  border: 1px solid #27272a;
+  padding: 20px;
+  margin: 12px;
+  margin-right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
 }
 
 /* Logo */
 .logo-img {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .profile-logo {
-  width: 150px;
+  width: 160px;
+  filter: drop-shadow(0 2px 8px rgba(139, 92, 246, 0.2));
 }
 
 /* Connected Profiles */
 .profiles {
   margin-top: 20px;
-  padding: 10px;
+  padding: 12px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  font-size: 18px;
-  font-weight: bold;
-  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  gap: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.profiles::-webkit-scrollbar {
+  width: 6px;
+}
+
+.profiles::-webkit-scrollbar-track {
+  background: #0a0a0a;
+  border-radius: 4px;
+}
+
+.profiles::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 4px;
 }
 
 /* Buttons */
@@ -46,34 +65,57 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  gap: 10px;
+  margin-top: auto;
 }
 
 .copy-button,
 .leave-button {
-  font-family: Poppins;
+  font-family: 'Poppins', sans-serif;
   width: 100%;
-  padding: 10px;
-  margin-top: 10px;
+  padding: 12px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .copy-button {
-  background-color: #007bff;
-  color: white;
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: #ffffff;
+}
+
+.copy-button:hover {
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.35);
 }
 
 .leave-button {
-  background-color: #dc3545;
-  color: white;
+  background: linear-gradient(135deg, #18181b 0%, #27272a 100%);
+  color: #e4e4e7;
+  border: 1px solid #3f3f46;
+}
+
+.leave-button:hover {
+  background: linear-gradient(135deg, #27272a 0%, #3f3f46 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.copy-button:active,
+.leave-button:active {
+  transform: translateY(0);
 }
 
 /* Editor Section */
 .editor-side {
   flex: 1;
-  margin: 10px;
-  font-size: 20px;
+  margin: 12px;
+  font-size: 16px;
   display: flex;
   align-items: start;
   justify-content: center;
@@ -82,42 +124,53 @@
 /* Mid-section */
 .mid-section {
   width: 100%;
-  padding: 10px;
-
+  padding: 16px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
-.connect{
-  font-size: 14px;
-  gap: 10px;
-  font-weight: 500;
+
+.connect {
+  font-size: 13px;
+  gap: 8px;
+  font-weight: 600;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #a1a1aa;
+  padding: 10px;
+  background-color: #18181b;
+  border-radius: 8px;
+  border: 1px solid #27272a;
+  margin-bottom: 12px;
 }
 
 /* 🎯 Responsive Design for Mobile Devices */
 @media screen and (max-width: 768px) {
   .main-container {
-      flex-direction: column;
-      height: auto;
-     
+    flex-direction: column;
+    height: auto;
   }
 
   .profile-side {
-       width: 20vw;
+    width: auto;
     min-width: 180px;
-    max-width: 250px;
-    padding: 1%;
+    max-width: 100%;
+    padding: 16px;
+    margin: 8px;
   }
 
   .profiles {
-      flex-direction: row;
-      align-items: center;
-      font-size: 16px;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+    max-height: 200px;
   }
 
   .editor-side {
-      width: 100%;
-      font-size: 16px;
+    width: 100%;
+    font-size: 14px;
+    margin: 8px;
   }
 
   .buttons {
@@ -126,32 +179,31 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 10px;
-    box-sizing: border-box; /* Prevent overflow */
-}
+    padding: 0;
+    gap: 8px;
+  }
 
-
-.buttons button {
+  .buttons button {
     flex: 1;
-    max-width: 48%; /* Prevent wrapping */
-}
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .profile-logo {
-      width: 120px;
+    width: 130px;
   }
 
   .profiles {
-      font-size: 14px;
+    font-size: 12px;
   }
 
   .editor-side {
-      font-size: 14px;
+    font-size: 12px;
   }
 
   .copy-button, .leave-button {
-    padding: 0.8rem;
-    font-size: 0.95rem;
-}
+    padding: 10px;
+    font-size: 13px;
+  }
 }

@@ -1,18 +1,33 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Removes main page scrollbar */
+  overflow: hidden;
+  background-color: #0a0a0a;
 }
 
 .CodeMirror {
   height: 100vh;
   min-height: calc(60vh);
   font-size: 14px;
-  border-radius: 10px;
+  border-radius: 12px;
   outline: none;
-  background-color: #2e2e2e;/* Grey background */
-  color: #e0e0e0; /* Light grey text */
-  border: 1px solid #3a3a3a; /* Soft border */
+  background-color: #0f0f0f;
+  color: #e4e4e7;
+  border: 1px solid #27272a;
   overflow: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.2s ease;
 }
 
+.CodeMirror:hover {
+  border-color: #3f3f46;
+}
+
+.CodeMirror-gutters {
+  background-color: #0a0a0a;
+  border-right: 1px solid #27272a;
+}
+
+.CodeMirror-linenumber {
+  color: #52525b;
+}

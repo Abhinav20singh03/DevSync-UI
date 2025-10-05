@@ -1,94 +1,121 @@
 #realTimeCodeEditor {
-    width: 100%;
-    font-size: 1rem;
-    height: 60vh;
-    font-size: 16px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: #212121; /* Dracula background */
-    color: #f8f8f2; /* Text color */
-  }
-  
-  .component-container{
-    width: 100%;
-  }
-  .navbar{
-    font-size: 15px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content:space-between ;
-    background-color: #212121;
-    margin-bottom: 10px;
-    border-radius: 10px;
-  }
-  select {
-    font-family: Poppins;
-    
-  padding-right: 1.5rem; /* give space for arrow */
-  appearance: none; /* hides default arrow in some browsers */
+  width: 100%;
+  font-size: 1rem;
+  height: 60vh;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #27272a;
+  background-color: #0f0f0f;
+  color: #e4e4e7;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.component-container {
+  width: 100%;
+}
+
+.navbar {
+  font-size: 15px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #0f0f0f 0%, #18181b 100%);
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: 1px solid #27272a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+select {
+  font-family: 'Poppins', sans-serif;
+  padding-right: 2rem;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: url('data:image/svg+xml;utf8,<svg fill="gray" height="10" viewBox="0 0 20 20" width="10" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 0.5rem center;
+  background: url('data:image/svg+xml;utf8,<svg fill="%23a1a1aa" height="10" viewBox="0 0 20 20" width="10" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 0.75rem center;
   background-size: 1rem;
+  background-color: #18181b;
   cursor: pointer;
   display: flex;
   justify-content: center;
-  align-items:center ;
-  width: 150px;
-  padding: 8px;
-  border-radius: 6px;
-  font-size: 12px;
-  border: none;
+  align-items: center;
+  width: 160px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid #3f3f46;
   outline: none;
-  background-color: #313235;
-  color: #ffffff;
-  transition: 0.2s;
+  color: #e4e4e7;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 select:hover {
-  border-color: #242828;
+  border-color: #8b5cf6;
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.15);
 }
-.settings{
+
+select:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.settings {
   display: flex;
   gap: 10px;
-
 }
 
-.navbutton{
+.navbutton {
   display: flex;
-  justify-content:center ;
+  justify-content: center;
   align-items: center;
-  padding: 5px ;
-  background-color: #212121;
-  color: #ffffff;
-  border-radius: 10px;
-  border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 10px;
+  background-color: #18181b;
+  color: #a1a1aa;
+  border-radius: 8px;
+  border: 1px solid #3f3f46;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
+
+.navbutton:hover {
+  background-color: #27272a;
+  color: #e4e4e7;
+  border-color: #52525b;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbutton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 /* Scrollbar styling for dropdowns */
 select::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
 
 select::-webkit-scrollbar-track {
-    background: #1b1b1b; /* match your theme background */
-    border-radius: 5px;
+  background: #0f0f0f;
+  border-radius: 4px;
 }
 
 select::-webkit-scrollbar-thumb {
-    background: #555; /* medium gray for contrast */
-    border-radius: 5px;
+  background: #3f3f46;
+  border-radius: 4px;
 }
 
 select::-webkit-scrollbar-thumb:hover {
-    background: #888; /* lighter gray on hover */
+  background: #52525b;
 }
 
 /* Firefox scrollbar styling for dropdowns */
 select {
-    scrollbar-width: thin;
-    scrollbar-color: #555 #1b1b1b;
+  scrollbar-width: thin;
+  scrollbar-color: #3f3f46 #0f0f0f;
 }
